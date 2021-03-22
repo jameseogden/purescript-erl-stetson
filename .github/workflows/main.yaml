@@ -17,5 +17,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: build
-        path: test/_build
+        path: ~
     - run: nix-shell --run 'make ci'
