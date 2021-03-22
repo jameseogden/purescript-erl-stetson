@@ -14,4 +14,8 @@ jobs:
         path: |
           output
         key: ${{ runner.os }}-build-products
+    - uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: _build
     - run: nix-shell --run 'make ci'
