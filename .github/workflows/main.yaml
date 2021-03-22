@@ -17,5 +17,5 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: build
-        path: ~/purescript-erl-stetson
+        path: /home/runner/work/purescript-erl-stetson/purescript-erl-stetson/test
     - run: nix-shell --run 'make ci'
