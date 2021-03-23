@@ -14,8 +14,9 @@ jobs:
         path: |
           /nix-store
         key: ${{ runner.os }}-nix
-    - run: nix-shell --run 'make ci'
+    - run: nix-shell --run 'make all testbuild'
     - uses: actions/upload-artifact@v2
       with:
         name: build
         path: /home/runner/work/purescript-erl-stetson
+    - run: nix-shell --run 'make ci'
