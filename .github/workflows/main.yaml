@@ -12,8 +12,8 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: |
-          output
-        key: ${{ runner.os }}-build-products
+          /nix-store
+        key: ${{ runner.os }}-nix
     - uses: actions/upload-artifact@v2
       with:
         name: build
